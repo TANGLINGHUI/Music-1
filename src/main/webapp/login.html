@@ -104,13 +104,13 @@
             <div style="height:150px;"></div>
             <div class="media media-y margin-big-bottom">
             </div>
-            <form action="index.html" method="post">
+            <form action="UserServlet" method="post">
                 <div class="panel loginbox">
                     <div class="text-center margin-big padding-big-top"><h1>登录界面</h1></div>
                     <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
                         <div class="form-group">
                             <div class="field field-icon-right">
-                                <input type="text" class="input input-big" name="name" placeholder="登录账号" data-validate="required:请填写账号" />
+                                <input type="text" class="input input-big" name="username" placeholder="登录账号" data-validate="required:请填写账号" />
                                 <span class="icon icon-user margin-small"></span>
                             </div>
                         </div>
@@ -122,10 +122,8 @@
                         </div>
                      
                     </div>
-                    <div style="padding:30px;">
-                        <a href="index.html">
-                        <input type="submit" class="button button-block bg-main text-big input-big" value="登录" onclick="window.location='index.html'">
-                        </a>
+                    <div style="padding:30px;">                        
+                        <button type="submit" class="button button-block bg-main text-big input-big" >登录</button>                      
                     </div>
                 </div>
             </form>
