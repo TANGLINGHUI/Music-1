@@ -4,16 +4,26 @@
 <head>
     <title>后台管理系统</title>
 	<meta charset="UTF-8">
-   <link rel="stylesheet" type="text/css" href="../Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="../Css/style.css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="renderer" content="webkit">
+ 
+   
+    <link rel="stylesheet" type="text/css" href="sys/Css/style.css" />
+    <link rel="stylesheet" type="text/css" href="sys/Css/printer.css"/>
+    <link rel="stylesheet" type="text/css" href="sys/Css/admin.css" />
+    <!--
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="../Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="../Js/bootstrap.js"></script>
     <script type="text/javascript" src="../Js/ckform.js"></script>
     <script type="text/javascript" src="../Js/common.js"></script>
-    <script type="text/javascript" src="js/jquery.cookie.js"></script>
-    <script type="text/javascript">
+    -->
+    <script type="text/javascript" src="../Js/printer.js"></script>
+    <script type="text/javascript" src="../Js/jq.js"></script>
+     <!--  
+     	<script type="text/javascript">
     	$(function() {
     		var username = $.cookie("username");
     		if (username == undefined) {
@@ -32,7 +42,9 @@
     			},"html");
     		});
     	});
-    </script>
+    </script>  
+    -->
+    <!--
     <style type="text/css">
         body {
             padding-top: 40px;
@@ -67,14 +79,14 @@
             padding: 7px 9px;
         }
 
-    </style>  
+    </style> 
+    -->
 </head>
 <body>
+	<!--
 <div class="container">
-<!-- 登录的表单:提交到处理登录请求的servlet的url
-         method = post -----servlet类的doPost方法
-          -->
-    <form class="form-signin" method="post" action="sys/UserServlet">
+
+    <form class="form-signin" method="post" action="UserServlet">
         <h2 class="form-signin-heading">登录系统</h2>
         
         账号：<input type="text" name="username" class="input-block-level" placeholder="账号" id="username"><br/>
@@ -84,5 +96,42 @@
     </form>
 
 </div>
+-->
+<div class="bg"></div>
+<div class="container">
+    <div class="line bouncein">
+        <div class="xs6 xm4 xs3-move xm4-move">
+            <div style="height:150px;"></div>
+            <div class="media media-y margin-big-bottom">
+            </div>
+            <form action="index.html" method="post">
+                <div class="panel loginbox">
+                    <div class="text-center margin-big padding-big-top"><h1>登录界面</h1></div>
+                    <div class="panel-body" style="padding:30px; padding-bottom:10px; padding-top:10px;">
+                        <div class="form-group">
+                            <div class="field field-icon-right">
+                                <input type="text" class="input input-big" name="name" placeholder="登录账号" data-validate="required:请填写账号" />
+                                <span class="icon icon-user margin-small"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="field field-icon-right">
+                                <input type="password" class="input input-big" name="password" placeholder="登录密码" data-validate="required:请填写密码" />
+                                <span class="icon icon-key margin-small"></span>
+                            </div>
+                        </div>
+                     
+                    </div>
+                    <div style="padding:30px;">
+                        <a href="index.html">
+                        <input type="submit" class="button button-block bg-main text-big input-big" value="登录" onclick="window.location='index.html'">
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
