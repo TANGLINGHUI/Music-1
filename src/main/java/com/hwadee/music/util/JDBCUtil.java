@@ -12,7 +12,7 @@ private static JDBCUtil idbcUtil = new JDBCUtil();
 	private final String driverClass = "com.mysql.jdbc.Driver";
 	private final String url="jdbc:mysql://localhost:3306/music?useUnicode=true&characterEncoiding=UTF-8";
 	private final String userName = "root";
-	private final String password = "123";
+	private final String password = "root";
 	private JDBCUtil(){
 		try {
 			Class.forName(driverClass);

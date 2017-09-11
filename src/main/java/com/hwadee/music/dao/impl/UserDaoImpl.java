@@ -14,6 +14,7 @@ import com.hwadee.music.util.JDBCUtil;
 public class UserDaoImpl implements UserDao{
 
 	@Override
+	//根据用户姓名和密码查找用户
 	public User findByNameAndPwd(User user) {
 		Connection conn = JDBCUtil.getInstance().getConnection();
 		String sql = "select * from users where user_name=? and user_pwd=?";
@@ -47,6 +48,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//新增用户信息
 	public void insert(User user) {
 		Connection conn = JDBCUtil.getInstance().getConnection();
 		String sql = "insert into users(user_name,user_pwd,user_gender,user_mail) values("
@@ -73,6 +75,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//根据用户ID删除用户信息
 	public void delete(int id) {
 		Connection conn = JDBCUtil.getInstance().getConnection();
 		String sql = "delete from users where user_id = ?";
@@ -95,6 +98,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//更新用户信息
 	public void update(User user) {
 		Connection conn = JDBCUtil.getInstance().getConnection();
 		String sql = "update users set user_name=?,user_pwd=?,user_gender=?,user_mail=? "
@@ -122,6 +126,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//根据用户编号查找用户
 	public User findById(int id) {
 		User user = null;
 		Connection conn = JDBCUtil.getInstance().getConnection();
@@ -153,6 +158,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//查询所有用户信息
 	public List<User> findAll() {
 		List<User> list =  new ArrayList<User>();
 		User user = null;
@@ -185,6 +191,7 @@ public class UserDaoImpl implements UserDao{
 	}
 
 	@Override
+	//根据用户姓名查找用户信息
 	public User findByName(String name) {
 		User user = null;
 		Connection conn = JDBCUtil.getInstance().getConnection();

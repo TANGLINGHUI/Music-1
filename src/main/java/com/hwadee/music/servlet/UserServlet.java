@@ -33,17 +33,17 @@ private UserService userService = new UserServiceImpl();
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String type = request.getParameter("type");
 		if("list".equals(type)){
-			listUsers(request,response);
+			listUsers(request,response);//显示所有用户信息
 		}else if("del".equals(type)){
-			delUser(request,response);
+			delUser(request,response);//删除用户信息
 		}else if("add".equals(type)){
-			addUser(request,response);
+			addUser(request,response);//新增用户信息
 		}else if("search".equals(type)){
-			findByName(request,response);
+			findByName(request,response);//根据姓名查找用户信息
 			}else if("findById".equals(type)){
-				findById(request,response);
+				findById(request,response);//根据编号查找用户信息
 			}else if("edit".equals(type)){
-				editUser(request,response);
+				editUser(request,response);//修改用户信息
 			}
 		}
 
@@ -115,7 +115,7 @@ private UserService userService = new UserServiceImpl();
 			List<User> list = userService.getAllUsers();
 			//list返回给界面显示
 			request.setAttribute("list", list);
-			request.getRequestDispatcher("User/index.jsp").forward(request, response);
+			request.getRequestDispatcher("sys/User/index.jsp").forward(request, response);
 	}
 
 	/**
@@ -125,8 +125,9 @@ private UserService userService = new UserServiceImpl();
 		// TODO Auto-generated method stub
 		
 		
+		//登录
 		
-		System.out.println("post方法");
+		
 		//1.得到页面的输入
 		String name = request.getParameter("username");
 		String pwd = request.getParameter("password");
