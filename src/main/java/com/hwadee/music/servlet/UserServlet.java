@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,7 +15,7 @@ import com.hwadee.music.service.UserService;
 import com.hwadee.music.service.impl.UserServiceImpl;
 
 @WebServlet("/UserServlet")
-public class UserServlet {
+public class UserServlet extends HttpServlet{
 private UserService userService = new UserServiceImpl();
 	
 	private static final long serialVersionUID = 1L;
